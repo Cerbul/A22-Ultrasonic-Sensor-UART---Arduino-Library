@@ -26,8 +26,8 @@ This library provides support for A22 ultrasonic sensors with serial communicati
 - `Read4Sensors.ino`: Combines 2 sensors on hardware ports and 2 on SoftwareSerial
 
 ## Possible Modifications:
-- You can change the baud rate through the constructor
-- You can use `Serial1`, `Serial2`, etc., on compatible boards (Mega, ESP32, Pico)
+- You can change the baud rate through the constructor (default: 115200)
+- You can use `Serial1`, `Serial2`, etc., on compatible boards (Mega, ESP32, Pico, Teensy)
 
 ## Notes:
 - SoftwareSerial only works with one port being listened to at a time
@@ -61,8 +61,8 @@ Această librărie oferă suport pentru senzorii ultrasonici A22 cu comunicare s
 - `Read4Sensors.ino`: Combină 2 senzori pe porturi hardware și 2 pe SoftwareSerial
 
 ## Modificări posibile:
-- Poți schimba baud rate-ul prin constructor
-- Poți folosi `Serial1`, `Serial2` etc. pe plăci compatibile (Mega, ESP32, Pico)
+- Poți schimba baud rate-ul prin constructor (implicit: 115200)
+- Poți folosi `Serial1`, `Serial2` etc. pe plăci compatibile (Mega, ESP32, Pico, Teensy)
 
 ## Note:
 - SoftwareSerial funcționează doar cu un port ascultat simultan
