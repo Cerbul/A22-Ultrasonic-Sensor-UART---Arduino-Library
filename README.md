@@ -1,8 +1,45 @@
+🇬🇧 EN
+
+# A22Ultrasonic Library - Documentation
+
+Sebastian M.
+
+This library provides support for A22 ultrasonic sensors with serial communication (UART controlled version), using both SoftwareSerial and HardwareSerial ports.
+
+## Main Functionality
+- Sending a trigger command
+- Waiting for synchronization (header 0xFF)
+- Reading 2 bytes for distance + checksum
+- Verifying checksum
+- Detecting interferences (code 65534)
+
+## Returned Codes:
+- `>=0` – Valid distance in mm
+- `-1` – Header timeout
+- `-2` – Data timeout
+- `-3` – Invalid checksum
+- `-4` – Interferences
+- `-10` – Nonexistent serial port
+
+## Examples:
+- `BasicRead.ino`: A single sensor on SoftwareSerial
+- `Read4Sensors.ino`: Combines 2 sensors on hardware ports and 2 on SoftwareSerial
+
+## Possible Modifications:
+- You can change the baud rate through the constructor
+- You can use `Serial1`, `Serial2`, etc., on compatible boards (Mega, ESP32, Pico)
+
+## Notes:
+- SoftwareSerial only works with one port being listened to at a time
+- For better reliability, use hardware ports where possible
+
+🇷🇴 RO
+
 # A22Ultrasonic Library - Documentație
 
 Sebastian M.
 
-Această librărie oferă suport pentru senzorii ultrasonici A22 cu comunicare serială, folosind atât SoftwareSerial cât și porturi HardwareSerial.
+Această librărie oferă suport pentru senzorii ultrasonici A22 cu comunicare serială (versiunea UART controlled), folosind atât SoftwareSerial cât și porturi HardwareSerial.
 
 ## Funcționalitate principală
 - Trimitere comandă trigger
