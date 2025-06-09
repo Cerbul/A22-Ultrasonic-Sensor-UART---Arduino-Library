@@ -1,6 +1,6 @@
 ![alt text](https://github.com/Cerbul/A22-Ultrasonic-Sensor-UART---Arduino-Library/blob/main/A22%20Ultrasonic%20Sensor.jpg "A22 Ultrasonic Sensor")
 
-# EN
+### EN
 
 # A22Ultrasonic Library - Documentation
 
@@ -36,7 +36,7 @@ This library provides support for A22 ultrasonic sensors with serial communicati
 - For better reliability, use hardware ports where possible
 
 
-# RO
+### RO
 
 # A22Ultrasonic Library - Documentație
 
