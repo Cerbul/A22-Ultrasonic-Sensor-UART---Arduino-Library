@@ -24,7 +24,7 @@ void A22Ultrasonic::begin() {
 }
 
 int A22Ultrasonic::readDistance() {
-  if (!serialPort) return -10;  // fallback fail-safe
+  if (!serialPort) return -10;          // Fallback fail-safe
 
   serialPort->write((uint8_t)0x00);
 
@@ -37,10 +37,10 @@ int A22Ultrasonic::readDistance() {
       if (header == 0xFF) break;
     }
   }
-  if (header != 0xFF) return -1;
+  if (header != 0xFF) return -1;         // Header timeout
 
   while (serialPort->available() < 3) {
-    if (millis() - t0 > 100) return -2;
+    if (millis() - t0 > 100) return -2;  // Data timeout
   }
 
   uint8_t dataH = serialPort->read();
@@ -48,10 +48,10 @@ int A22Ultrasonic::readDistance() {
   uint8_t sum   = serialPort->read();
 
   uint8_t chk = (0xFF + dataH + dataL) & 0xFF;
-  if (chk != sum) return -3;
+  if (chk != sum) return -3;              // Invalid checksum
 
   uint16_t dist = (dataH << 8) | dataL;
-  if (dist == 0xFFFE) return -4;
+  if (dist == 0xFFFE) return -4;          // Interferences
 
   return dist;
 }
