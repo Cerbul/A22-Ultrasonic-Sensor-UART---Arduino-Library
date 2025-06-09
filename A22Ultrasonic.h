@@ -6,10 +6,10 @@
 
 class A22Ultrasonic {
 public:
-  // Constructor pentru SoftwareSerial
+  // SoftwareSerial Constructor
   A22Ultrasonic(uint8_t rxPin, uint8_t txPin, long baudRate = 115200);
 
-  // Constructor pentru HardwareSerial
+  // HardwareSerial Constructor
   A22Ultrasonic(HardwareSerial* hwSerial, long baudRate = 115200);
 
   void begin();
